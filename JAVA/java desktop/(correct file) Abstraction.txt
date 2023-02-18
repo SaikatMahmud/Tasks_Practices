@@ -1,0 +1,151 @@
+public abstract class Person
+{
+protected String name;
+protecteds int age;
+protected String phoneNo;
+protected String email;
+protected boolean occupation;
+
+public Person(){}
+
+public void setName(String name)
+{this.name=name;}
+
+public void setAge(int age)
+{this.age=age;}
+
+public String getName()
+{return name;}
+
+public int getAge()
+{return age;}
+
+public void setPhoneNo(String PhoneNo)
+{this.phoneNo=phoneNo;}
+
+public String getPhoneNo()
+{return phoneNo;}
+
+public void setEmail(String email)
+{this.email=email;}
+
+public String getEmail()
+{return email;}
+
+abstract boolean hasOccupation();
+abstract public void display();
+
+
+}
+
+
+public class Student extends Person
+{
+private String id;
+private double cgpa;
+
+public Student(){}
+
+public void setID(String id)
+{this.id=id;}
+
+public void setCGPA(double cgpa)
+{this.cgpa=cgpa;}
+
+public String getID()
+{return id;}
+
+public double getCGPA()
+{return cgpa;}
+
+boolean hasOccupation(boolean  occupation)
+{}
+public void display()
+{
+System.out.println("Name :"+name);
+System.out.println("Age :"+age);
+System.out.println("Ph no :"+phoneNo);
+System.out.println("Email :"+email);
+System.out.println("Id :"+id);
+System.out.println("CGPA :"+cgpa);
+System.out.println("Has a Occupation= "+hasOccupation());
+}
+
+}
+
+
+public class Employee extends Person
+{
+	private String id; 
+private int salary;
+
+	public Employee()
+	{}
+public void setID(String id)
+{this.id=id;}
+
+public void setSalary(int salary)
+{this.salary=salary:}
+
+public String getID()
+{return id;}
+public int getSalary()
+{return salary;}
+
+boolean hasOccupation(boolean  occupation){}
+
+public void display()
+{
+System.out.println("Name :"+name);
+System.out.println("Age :"+age);
+System.out.println("Ph no :"+phoneNo);
+System.out.println("Email :"+email);
+System.out.println("Id :"+id);
+System.out.println("Salary :"+salary);
+System.out.println("Has a Occupation= "+hasOccupation());
+}
+
+	
+	
+}
+
+public class Main
+{
+	public static void main(String arg[])
+	{
+		Person p;
+		p=new Student();
+		p.setName("Saikat");
+		p.setAge(20);
+		p.getName();
+		p.getAge();
+		p.setPhoneNo("0175555");
+		p.getPhoneNo();
+		p.setEmail("@gmail.com");
+		p.getEmail();
+		p.setID("19-41556-3");
+		p.setCGPA(4.00);
+		p.getID();
+		p.getCGPA();
+		p.hasOccupation(false);
+		p.display();
+		
+		p=new Employee();
+		p.setName("Mahmud");
+		p.setAge(25);
+		p.getName();
+		p.getAge();
+		p.setPhoneNo("017999999");
+		p.getPhoneNo();
+		p.setEmail("@gmail.com");
+		p.getEmail();
+		p.setID("44545645");
+		p.setSalary(4.00);
+		p.getID();
+		p.getSalary();
+		p.hasOccupation(true);
+		p.display();
+		
+	}
+	
+}

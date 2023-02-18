@@ -1,0 +1,123 @@
+public class Sample
+{
+	public int value1, value2, value3, value4;
+	
+	public Sample()
+	{}
+	public Sample(int value1, int value2,int value3,int value4)
+	{
+		this.value1=value1;
+		this.value2=value2;
+		this.value3=value3;
+		this.value4=value4;
+	}
+	void display(int value1)
+	{
+	System.out.println(value1);
+	}
+	
+	void display(int value1, int value2)
+	{
+		
+	System.out.println(value1);
+	System.out.println(value2);
+	}
+	
+	void display(int value1, int value2, int value3, int value4)
+	{
+	   
+	System.out.println(value1);
+	System.out.println(value2);
+	System.out.println(value3);
+	System.out.println(value4);
+	}
+	
+}
+
+public class MainSample
+{
+	public static void main (String[] args)
+	{
+		 Sample x=new Sample();
+		 Sample s=new Sample(5,6,7,8);
+		 s.display(5);
+		 s.display(5,6);
+		 s.display(5,6,7,8);
+	}
+}
+**************************************************
+**************************************************
+
+public class Triangle
+{
+  protected float base;
+  protected float height;
+
+  Triangle(){}
+  Triangle(float base, float height)
+  {
+	  this.base=base;
+	  this.height=height;
+  }
+  void setBase(float base)
+  {this.base=base;}
+  
+void setHeight(float height)
+{this.height=height;}
+
+float getBase()
+{return base;}
+
+float getWidth()
+{return height;}
+
+void calculateArea()
+{
+	System.out.println("Base= "+base);
+	System.out.println("Height= "+height);
+}
+}
+public class RightAngleTriangle extends Triangle
+{
+	RightAngleTriangle(){}
+	RightAngleTriangle(float base, float height)
+	{super(base,height);}
+	
+	void calculateArea()
+	{
+	System.out.println("Right angle triangle area= "+.5*base*height);
+	}
+	
+	
+}
+public class EquilateralTriangle extends Triangle
+{
+EquilateralTriangle(){}
+   EquilateralTriangle(float base, float height)
+   {super(base,height);}
+   
+   void calculateArea()
+   {
+	System.out.println("Equilateral triangle area= "+0.433*base*height);
+	         //  (sq root 3)/4= 0.433
+   }
+}
+public class MainClass
+{
+	public static void main (String[] args)
+	{
+		Triangle a=new Triangle();
+		a.setBase(3);
+		a.setHeight(4);
+		a.getBase();
+		a.getWidth();
+		a.calculateArea();
+		
+		a=new RightAngleTriangle(3,4);
+		a.calculateArea();
+		
+		a=new EquilateralTriangle(5,5);
+		a.calculateArea();
+	}
+}
+************************************

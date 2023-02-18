@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1571123736 source:c:\users\user\desktop\new folder\function\main.cpp
+	<iostream>
+	<string.h>
+
